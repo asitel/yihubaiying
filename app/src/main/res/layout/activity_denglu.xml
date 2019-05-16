@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_zuizong"
+    android:padding="80dp"
+    android:layout_gravity="center"
+    tools:context=".dengluActivity"
+
+
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.administrator.yihubaiyin.CircleImageView
+            android:id="@+id/yhtx"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+
+            android:contentDescription="CircleImageView"
+            android:src="@drawable/tx2"
+
+            />
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:id="@+id/yhm"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:textColor="@color/EditTextcolor"
+        android:background="@drawable/textview_border"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:hint="UserName"
+
+        />
+
+    <EditText
+        android:id="@+id/mm"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@id/yhm"
+        android:textColor="@color/EditTextcolor"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:hint="Password"
+        android:background="@drawable/textview_border"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/denglubutton"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@drawable/bt_shape"
+        android:layout_below="@id/mm"
+        android:textColor="#7e7e7e"
+
+        android:text="Login"
+
+
+        />
+
+    <TextView
+        android:id="@+id/zhuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/denglubutton"
+        android:layout_marginTop="10dp"
+        android:text="注册账户?"
+        android:textColor="#1296db" />
+
+
+</TableLayout>

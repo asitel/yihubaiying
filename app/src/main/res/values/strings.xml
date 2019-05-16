@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">一呼百应</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="mz">此APP由初级程序员编写，界面简单，单线程，未设计数据库，BUG较多，数据安全无保障，个人信息泄露概不负责，请放心裸奔。
+
+
+
+    </string>
+</resources>

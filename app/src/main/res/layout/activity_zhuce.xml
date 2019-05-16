@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="100dp"
+    android:paddingLeft="80dp"
+    android:paddingRight="60dp"
+    tools:context=".zhuceActivity">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="10dp"
+    android:text="*密码长度大于6位小于18位"
+    />
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名:"
+            android:textSize="20dp"
+
+
+
+            />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/textview_border"
+            android:hint="用户名"
+            android:textColor="@color/EditTextcolor"
+
+            />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密     码:"
+        android:textSize="20dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/numberPassword"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/textview_border"
+        android:hint="密码"
+        android:textColor="@color/EditTextcolor"
+
+        />
+</TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确认密码:"
+        android:textSize="20dp"
+
+
+        />
+
+    <EditText
+        android:id="@+id/compwd"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/textview_border"
+        android:hint="密码"
+        android:textColor="@color/EditTextcolor"
+
+        />
+</TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="性别:"
+            android:textSize="20dp"
+
+
+            />
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+
+                android:text="男"
+
+
+                />
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:layout_marginLeft="40dp"
+                android:text="女" />
+
+        </RadioGroup>
+
+
+
+    </TableRow>
+
+  <TableLayout
+      android:layout_marginTop="50dp"
+      >
+      <TableRow>
+      <Button
+          android:id="@+id/fanhubutton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+android:layout_marginLeft="10dp"
+android:background="@drawable/bt_shape"
+          android:textColor="#7e7e7e"
+          android:text="返回" />
+
+      <Button
+          android:id="@+id/zhucebutton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="30dp"
+android:background="@drawable/bt_shape"
+          android:textColor="#7e7e7e"
+          android:text="注册"
+
+          />
+  </TableRow>
+
+      <RadioButton
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="10dp"
+          android:layout_marginLeft="10dp"
+          android:textColor="#3F51B5"
+          android:checked="true"
+          android:text="我同意用户隐私保护协议"
+          android:id="@+id/xieyibutton"
+          />
+  </TableLayout>
+
+
+</TableLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".gerenxinxi"
+    android:paddingTop="20dp"
+    android:paddingLeft="60dp"
+    android:paddingRight="60dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="个人中心"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:id="@+id/toubu"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:hint="用户名:"
+        android:id="@+id/yhmtextview"
+        android:layout_below="@+id/toubu"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/yhmtextview"
+            android:layout_alignBottom="@+id/yhmtextview"
+            android:id="@+id/yonghuming"
+            android:gravity="center"
+
+            android:background="@drawable/textview_border"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:textSize="15dp"
+            android:hint="密    码:"
+            android:id="@+id/mmtextview"
+            android:layout_below="@+id/yhmtextview"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mmtextview"
+            android:layout_alignBottom="@+id/mmtextview"
+            android:id="@+id/mima"
+            android:gravity="center"
+            android:background="@drawable/textview_border"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:hint="性    别:"
+            android:id="@+id/xinbeitextview"
+            android:layout_below="@+id/mmtextview"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/xinbeitextview"
+            android:layout_alignBottom="@+id/xinbeitextview"
+            android:id="@+id/xinbie"
+            android:gravity="center"
+            android:background="@drawable/textview_border"
+            />
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

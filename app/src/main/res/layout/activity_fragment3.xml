@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container3"
+    android:orientation="vertical"
+    android:background="#d8d8d8"
+    tools:context=".Fragment3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/tx2mh"
+        android:id="@+id/top"
+
+        >
+            <com.example.administrator.yihubaiyin.CircleImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+               android:id="@+id/grxxtx"
+
+                android:src="@drawable/tx2"
+                />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="梢"
+            android:id="@+id/grxxyhm"
+            android:layout_below="@+id/grxxtx"
+            android:layout_alignLeft="@+id/grxxtx"
+
+            />
+    </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/bankuai1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/top"
+
+                android:background="#ffffff"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imgview1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+
+                    android:src="@drawable/yonhu"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imgview1"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/imgview1"
+                    android:text="个人信息"
+                    android:textSize="10dp"
+
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="330dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+
+                    android:layout_toRightOf="@+id/imgview1"
+
+                    android:src="@drawable/you"/>
+            </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:id="@+id/bankuai2"
+        android:background="#fff"
+
+        android:layout_below="@id/bankuai1"
+        >
+
+        <ImageView
+            android:id="@+id/imgview3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+
+            android:maxWidth="50dp"
+            android:src="@drawable/guanyuwomen"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imgview3"
+            android:layout_marginLeft="5dp"
+            android:textSize="10dp"
+            android:layout_toRightOf="@id/imgview3"
+            android:text="关于我们"
+
+            />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:layout_toRightOf="@+id/imgview3"
+            android:maxWidth="50dp"
+            android:src="@drawable/you"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+        android:background="#fff"
+        android:layout_marginTop="2dp"
+
+                android:layout_below="@id/bankuai2"
+                android:id="@+id/bankuai3"
+                >
+
+                <ImageView
+                    android:id="@+id/imgview2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+
+                    android:maxWidth="50dp"
+                    android:src="@drawable/shezhi"
+
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/imgview2"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10dp"
+                    android:layout_toRightOf="@id/imgview2"
+                    android:text="设 置"
+
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="330dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="50dp"
+                    android:layout_toRightOf="@+id/imgview2"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/you"/>
+            </RelativeLayout>
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+        android:background="#fff"
+        android:layout_marginTop="2dp"
+            android:layout_weight="1"
+
+            android:layout_below="@id/bankuai3"
+            android:id="@+id/bankuai4"
+            >
+
+            <ImageView
+                android:id="@+id/imgview4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:maxHeight="50dp"
+
+                android:maxWidth="50dp"
+                android:src="@drawable/genduo"
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/imgview4"
+                android:layout_marginLeft="5dp"
+                android:textSize="10dp"
+                android:layout_toRightOf="@id/imgview4"
+                android:text="更 多"
+
+                />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxHeight="50dp"
+            android:layout_toRightOf="@+id/imgview4"
+            android:maxWidth="50dp"
+            android:src="@drawable/you"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/qiuhuandhanghao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+
+            android:layout_gravity="center"
+
+            android:background="#ff0000"
+            android:text="切换账号"
+
+            android:textColor="#fff"
+            android:textSize="10dp" />
+
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+
