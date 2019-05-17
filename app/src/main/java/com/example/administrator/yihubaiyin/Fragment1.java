@@ -19,9 +19,12 @@ import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.MapStatusUpdate;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MarkerOptions;
+import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 
@@ -68,6 +71,7 @@ public class Fragment1 extends Fragment{
     private LocationClientOption initLocation(){
         LocationClientOption option = new LocationClientOption();
         option.setIsNeedAddress(true);
+        option.setScanSpan(1000);
         option.setCoorType("bd09ll");
         option.setIsNeedLocationDescribe(true);
         option.setNeedDeviceDirect(false);
@@ -75,9 +79,14 @@ public class Fragment1 extends Fragment{
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
         return option;
     }
+
+
+
     private void requestLocation(){
         LocationClientOption option = initLocation();
         mLocationClient.setLocOption(option);
+        MyLocationListener myLocationListener = new MyLocationListener();
+        mLocationClient.registerLocationListener(myLocationListener);
         mLocationClient.start();
     }
 
@@ -99,7 +108,7 @@ public class Fragment1 extends Fragment{
         mLocationClient.stop();
         mapView.onDestroy();
         baiduMap.setMyLocationEnabled(false);
-
+        mapView = null;
     }
     private void navigateTo(BDLocation location){
         if(isFirstLocate){
@@ -113,7 +122,10 @@ public class Fragment1 extends Fragment{
         MyLocationData.Builder locationBuilder = new MyLocationData.Builder();
         locationBuilder.latitude(location.getLatitude());
         locationBuilder.longitude(location.getLongitude());
-        MyLocationData locationData = locationBuilder.build();
+        MyLocationData locationData =new MyLocationData.Builder()
+                .accuracy(location.getRadius())
+                .direction(location.getDirection()).latitude(location.getLatitude())
+                .longitude(location.getLongitude()).build();
         baiduMap.setMyLocationData(locationData);
     }
 
