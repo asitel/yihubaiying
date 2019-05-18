@@ -30,7 +30,6 @@
                 android:background="#d8d8d8"
                 android:orientation="vertical"
                 android:padding="5dip">
-
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
@@ -54,12 +53,6 @@
                     android:hint="此处添加紧急联系人电话号码"/>
 
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button" />
-
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -71,7 +64,15 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:background="@drawable/tianjai" />
-
+                    <!--
+                                        <ImageButton
+                                            android:id="@+id/ibn_del1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginRight="10dip"
+                                            android:layout_toLeftOf="@id/ibn_add1"
+                                            android:background="@drawable/ic_delete" />
+                     -->
                 </RelativeLayout>
 
             </LinearLayout>
@@ -79,6 +80,8 @@
         </LinearLayout>
 
     </ScrollView>
+
+
 
 
 </RelativeLayout>
