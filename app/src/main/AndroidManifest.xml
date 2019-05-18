@@ -12,6 +12,13 @@
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
     <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,9 +29,9 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="Gy4TPWwAkEjNfhiDIttfXCVzrSH93wTY"/>
-        <activity android:name=".MainActivity" />
+        <!--<activity android:name=".MainActivity" />-->
         <activity
-            android:name=".dengluActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +40,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".zhuceActivity" />
+        <activity android:name=".dengluActivity"/>
         <activity android:name=".Fragment1" />
         <activity android:name=".Fragment2" />
         <activity android:name=".Fragment3" />
