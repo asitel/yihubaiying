@@ -1,25 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/container2"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     tools:context=".Fragment2">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none" >
-
-        <LinearLayout
-            android:id="@+id/content_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:isScrollContainer="true"
-            android:orientation="vertical"
-            android:padding="10.0dip" >
 
             <LinearLayout
                 android:id="@+id/ll_one"
@@ -28,56 +15,49 @@
                 android:layout_marginTop="5dip"
                 android:background="#d8d8d8"
                 android:orientation="vertical"
-
-
-                android:padding="5dip"
-                >
-
+                android:padding="5dip">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/showSOS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"/>
+                </ScrollView>
                 <EditText
                     android:id="@+id/et_content1"
                     android:layout_width="match_parent"
-                    android:layout_height="60dip"
+                    android:layout_height="wrap_content"
                     android:background="#FFFFFFFF"
                     android:textColor="#000"
                     android:gravity="left"
                     android:inputType="textMultiLine"
                     android:paddingLeft="5dip"
-                    android:textSize="16sp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dip" >
-
-                    <ImageButton
-                        android:id="@+id/ibn_add1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:background="@drawable/tianjai" />
-                    <ImageButton
-                        android:id="@+id/ibn_fs1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="265dip"
-                        android:layout_toLeftOf="@+id/ibn_add1"
-                        android:background="@drawable/fasong2" />
-
-                    <!--
-                                        <ImageButton
-                                            android:id="@+id/ibn_del1"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginRight="10dip"
-                                            android:layout_toLeftOf="@id/ibn_add1"
-                                            android:background="@drawable/ic_delete" />
-                     -->
-                </RelativeLayout>
+                    android:textSize="16sp"
+                    android:hint="此处添加紧急联系人电话号码"/>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+    <Button
+        android:id="@+id/ibn_add1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/tianjai"
+        android:text="添加紧急联系人"
+        android:textColor="#000" />
 
+    <Button
+        android:id="@+id/ibn_jian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/jian"
+        android:text="删除紧急联系人"
+        android:textColor="#000" />
 
+    <Button
+        android:id="@+id/faduanxin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一键求助"
+        android:textColor="#000"/>
 
-
-</RelativeLayout>
+</LinearLayout>
