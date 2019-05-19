@@ -1,5 +1,6 @@
 package com.example.administrator.yihubaiyin;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -21,6 +22,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    static  String username;
 
     private TextView mTextMessage;
     private BottomNavigationView bottomNavigationView;
@@ -112,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent=getIntent();
+        Bundle bundle=intent.getExtras();
+        username=bundle.getString("username");
         initFragment();
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);

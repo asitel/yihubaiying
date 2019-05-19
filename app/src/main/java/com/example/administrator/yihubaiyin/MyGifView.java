@@ -28,7 +28,7 @@ public class MyGifView extends View{
 
 //以文件流（InputStream）读取进gif图片资源
 
-        movie=Movie.decodeStream(getResources().openRawResource(R.drawable.zhuyie2));
+//        movie=Movie.decodeStream(getResources().openRawResource(R.drawable.zhuyie2));
 
     }
 

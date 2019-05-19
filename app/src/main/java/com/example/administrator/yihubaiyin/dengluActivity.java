@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,7 +29,7 @@ public class dengluActivity extends Activity {
  private EditText yhmsrk,mmsrk;
 private String ss1,ss2;
 
-int zt,code;
+int zt=200,code;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,22 +56,12 @@ int zt,code;
             public void onClick(View v) {
                 ss1=yhmsrk.getText().toString();
                 ss2=mmsrk.getText().toString();
-//                yonghuxinxi yx=new yonghuxinxi();
-                RequestBody requestBody = new FormBody.Builder().add("username", ss1).add("password", ss2).build();
-                code=okhttp_post(requestBody, "http://192.168.42.193:3000/signin");
-//                code=200;
-                Log.d("=====","调用"+code);
-            if(code==200){
-                Intent intent=new Intent(dengluActivity.this,MainActivity.class);
-                startActivity(intent);
-                finish();
-                   code=0;
-                }
-                else{
-//                    dengluxinxi dlxx=new dengluxinxi();
-//                            dlxx.getdenluxinxi(ss1,ss2);
+                if(ss1.equals("")&&ss2.equals("")){
+                    Toast.makeText(getApplicationContext(),"用户名或密码错误",Toast.LENGTH_SHORT).show();
+                }else {
+                    RequestBody requestBody = new FormBody.Builder().add("username", ss1).add("password", ss2).build();
 
-                Toast.makeText(dengluActivity.this,"用户名或密码不正确",Toast.LENGTH_LONG).show();
+                    okhttp_post(requestBody, "http://192.168.199.187:3000/signin");
                 }
 
             }
@@ -80,7 +71,7 @@ int zt,code;
     }
 
 
-    public int okhttp_post(RequestBody formBody, String url) {
+    public void okhttp_post(RequestBody formBody, String url) {
 
 
 
@@ -105,6 +96,21 @@ int zt,code;
                     zt=jsonObject.getInt("code");
                     Log.d("状态码","code检验:==="+String.valueOf(zt));
 
+                    Log.d("=====","调用"+zt);
+                    if(zt==200){
+                        Bundle bundle=new Bundle();
+                        Intent intent=new Intent(dengluActivity.this,MainActivity.class);
+                        bundle.putString("username",ss1);
+                        intent.putExtras(bundle);
+                        startActivity(intent);
+                        finish();
+                        zt=0;
+                    }
+                    else{
+                        Toast.makeText(getApplicationContext(),"用户名或密码不正确",Toast.LENGTH_LONG).show();
+                    }
+
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -113,6 +119,6 @@ int zt,code;
             }
         });
 
-        return  zt;
+
     }
 }

@@ -88,20 +88,12 @@ public class zhuceActivity extends Activity {
 //                            yonghuxinxi yx = new yonghuxinxi();
 //                            boolean bl = yx.yonghuxinxi(yhm, mm, xb);
 
-                            int code = okhttp_post("http://192.168.42.193:3000/signup");
+                            okhttp_post("http://192.168.42.248:3000/signup");
 
                             Log.d("code", "调用方法时状态码：" + zt);
 
 
-                            if (code != 200) {
-                                Toast.makeText(zhuceActivity.this, "用户名重复", Toast.LENGTH_LONG).show();
-                            } else {
-                                Toast.makeText(zhuceActivity.this, "注册成功，即将跳转至登陆界面", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(zhuceActivity.this, dengluActivity.class);
-                                startActivity(intent);
-                                finish();
 
-                            }
 
                         }
                     }
@@ -121,7 +113,7 @@ public class zhuceActivity extends Activity {
     }
 
 
-    public int okhttp_post(final String url) {
+    public void okhttp_post(final String url) {
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -141,6 +133,17 @@ public class zhuceActivity extends Activity {
                     data = response.body().string();
                     JSONObject jsonObject = new JSONObject(data);
                     zt = jsonObject.getInt("code");
+
+                    if (zt != 200) {
+                        Toast.makeText(zhuceActivity.this, "用户名重复", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(zhuceActivity.this, "注册成功，即将跳转至登陆界面", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(zhuceActivity.this, dengluActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                    }
+
 //                    Log.d("状态码","conde:==="+String.valueOf(zt));
 
                 } catch (IOException e) {
@@ -151,7 +154,7 @@ public class zhuceActivity extends Activity {
             }
         }).start();
         Log.d("code", "请求返回状态码：" + zt);
-        return zt;
+
     }
 
 }
