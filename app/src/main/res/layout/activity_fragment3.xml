@@ -240,54 +240,6 @@
             android:maxWidth="50dp"
             android:src="@drawable/you"/>
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#fff"
-            android:layout_marginTop="2dp"
-            android:layout_weight="1"
-
-            android:layout_below="@id/bankuai4"
-            android:id="@+id/bankuai5"
-            >
-
-            <ImageView
-                android:id="@+id/imgview5"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="10dp"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:maxHeight="50dp"
-
-                android:maxWidth="50dp"
-                android:src="@drawable/genduo"
-
-
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/imgview5"
-                android:layout_marginLeft="5dp"
-                android:textSize="10dp"
-                android:layout_toRightOf="@id/imgview5"
-                android:text="摔倒检测"
-
-                />
-
-            <Switch
-                android:id="@+id/switch1"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/imgview5"
-                android:layout_alignParentEnd="true"
-                android:text="" />
-
-
-        </RelativeLayout>
 
 
         <Button
@@ -308,7 +260,5 @@
             android:textSize="10dp" />
 
 </RelativeLayout>
-
-
 </android.support.design.widget.CoordinatorLayout>
 

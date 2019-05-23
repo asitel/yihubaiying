@@ -43,9 +43,6 @@
             android:enabled="true"
             android:process=":remote">
         </service>
-       <service android:name=".Myservice">
-
-       </service>
     </application>
 
 </manifest>

@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/YiHuBaiYin.iml" filepath="$PROJECT_DIR$/YiHuBaiYin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/yihubaiying.iml" filepath="$PROJECT_DIR$/yihubaiying.iml" />
       <module fileurl="file://$PROJECT_DIR$/yihubaiying.iml" filepath="$PROJECT_DIR$/yihubaiying.iml" />
+=======
+>>>>>>> parent of 9fcef57... 2019-5-19:10.16
     </modules>
   </component>
 </project>
