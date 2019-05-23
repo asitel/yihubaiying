@@ -1,7 +1,10 @@
 package com.example.administrator.yihubaiyin;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 8ef9520... 20:29
 import android.content.Context;
 >>>>>>> parent of 8ef9520... 20:29
 import android.content.Intent;
@@ -17,6 +20,9 @@ import android.widget.RelativeLayout;
 <<<<<<< HEAD
 =======
 import android.widget.Switch;
+<<<<<<< HEAD
+>>>>>>> parent of 8ef9520... 20:29
+=======
 >>>>>>> parent of 8ef9520... 20:29
 
 public class Fragment3 extends Fragment {

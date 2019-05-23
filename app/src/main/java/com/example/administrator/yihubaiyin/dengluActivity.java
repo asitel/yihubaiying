@@ -16,6 +16,9 @@ private String ss1,ss2;
 =======
 
 int zt,code;
+<<<<<<< HEAD
+>>>>>>> parent of 8ef9520... 20:29
+=======
 >>>>>>> parent of 8ef9520... 20:29
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,7 @@ int zt,code;
                 ss1=yhmsrk.getText().toString();
                 ss2=mmsrk.getText().toString();
 <<<<<<< HEAD
+<<<<<<< HEAD
                 yonghuxinxi yx=new yonghuxinxi();
 
             if(yx.denglujiance(ss1,ss2)==true){
@@ -71,6 +75,23 @@ int zt,code;
 //                    dengluxinxi dlxx=new dengluxinxi();
 //                            dlxx.getdenluxinxi(ss1,ss2);
 
+=======
+//                yonghuxinxi yx=new yonghuxinxi();
+                RequestBody requestBody = new FormBody.Builder().add("username", ss1).add("password", ss2).build();
+                code=okhttp_post(requestBody, "http://192.168.42.193:3000/signin");
+//                code=200;
+                Log.d("=====","调用"+code);
+            if(code==200){
+                Intent intent=new Intent(dengluActivity.this,MainActivity.class);
+                startActivity(intent);
+                finish();
+                   code=0;
+                }
+                else{
+//                    dengluxinxi dlxx=new dengluxinxi();
+//                            dlxx.getdenluxinxi(ss1,ss2);
+
+>>>>>>> parent of 8ef9520... 20:29
                 Toast.makeText(dengluActivity.this,"用户名或密码不正确",Toast.LENGTH_LONG).show();
                 }
 

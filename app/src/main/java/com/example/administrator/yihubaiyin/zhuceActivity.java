@@ -110,6 +110,9 @@ public class zhuceActivity extends Activity {
                                 finish();
 
                             }
+<<<<<<< HEAD
+>>>>>>> parent of 8ef9520... 20:29
+=======
 >>>>>>> parent of 8ef9520... 20:29
 
                         }
@@ -164,6 +167,9 @@ public class zhuceActivity extends Activity {
         }).start();
         Log.d("code", "请求返回状态码：" + zt);
         return zt;
+<<<<<<< HEAD
+>>>>>>> parent of 8ef9520... 20:29
+=======
 >>>>>>> parent of 8ef9520... 20:29
     }
 
