@@ -12,7 +12,6 @@ import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -46,15 +45,9 @@ public class Fragment1 extends Fragment{
         mLocationClient = new LocationClient(getActivity().getApplicationContext());
         mLocationClient.registerLocationListener(new MyLocationListener());
         mapView = (MapView)view.findViewById(R.id.bmapView);
-        Button bt=view.findViewById(R.id.dw);
         baiduMap = mapView.getMap();
         baiduMap.setMyLocationEnabled(true);
-bt.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        mLocationClient.start();
-    }
-});
+
 
         List<String> permissionList = new ArrayList<>();
         if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
@@ -95,7 +88,6 @@ bt.setOnClickListener(new View.OnClickListener() {
         MyLocationListener myLocationListener = new MyLocationListener();
         mLocationClient.registerLocationListener(myLocationListener);
         mLocationClient.start();
-
     }
 
     @Override
