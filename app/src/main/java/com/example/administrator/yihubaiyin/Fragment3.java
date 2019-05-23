@@ -1,5 +1,9 @@
 package com.example.administrator.yihubaiyin;
 
+<<<<<<< HEAD
+=======
+import android.content.Context;
+>>>>>>> parent of 8ef9520... 20:29
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,6 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+<<<<<<< HEAD
+=======
+import android.widget.Switch;
+>>>>>>> parent of 8ef9520... 20:29
 
 public class Fragment3 extends Fragment {
 
@@ -44,6 +52,25 @@ public class Fragment3 extends Fragment {
                startActivity(new Intent(getActivity(),guanyuwomen.class));
             }
         });
+<<<<<<< HEAD
+=======
+
+
+        switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                Intent serviceintent=new Intent(getContext(),Myservice.class);
+                    getContext().startService(serviceintent);
+                }
+                if(!isChecked){
+                    Intent intent=new Intent(getContext(),Myservice.class);
+                    getContext().stopService(intent);
+                }
+            }
+        });
+
+>>>>>>> parent of 8ef9520... 20:29
         return  view;
     }
 

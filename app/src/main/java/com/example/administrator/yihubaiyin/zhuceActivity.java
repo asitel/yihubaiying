@@ -49,6 +49,7 @@ public class zhuceActivity extends Activity {
         bt1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD
                 yhm=username.getText().toString();
                 mm=userpassword.getText().toString();
                 qrmm=compwd.getText().toString();
@@ -76,6 +77,40 @@ public class zhuceActivity extends Activity {
      finish();
 
  }
+=======
+                yhm = username.getText().toString();
+                mm = userpassword.getText().toString();
+                qrmm = compwd.getText().toString();
+
+                if (yhm.length() < 1 || mm.length() < 1 || qrmm.length() < 1) {
+                    Toast.makeText(zhuceActivity.this, "输入框不能为空", Toast.LENGTH_SHORT).show();
+                } else {
+                    if (mm.length() < 3 || mm.length() > 18) {
+                        Toast.makeText(zhuceActivity.this, "密码长度不符合规定", Toast.LENGTH_LONG).show();
+                    } else {
+                        if (mm.equals(qrmm) == false) {
+                            Toast.makeText(zhuceActivity.this, "两次密码不一致", Toast.LENGTH_LONG).show();
+                        } else {
+
+
+//                            yonghuxinxi yx = new yonghuxinxi();
+//                            boolean bl = yx.yonghuxinxi(yhm, mm, xb);
+
+                            int code = okhttp_post("http://192.168.42.193:3000/signup");
+
+                            Log.d("code", "调用方法时状态码：" + zt);
+
+
+                            if (code != 200) {
+                                Toast.makeText(zhuceActivity.this, "用户名重复", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(zhuceActivity.this, "注册成功，即将跳转至登陆界面", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(zhuceActivity.this, dengluActivity.class);
+                                startActivity(intent);
+                                finish();
+
+                            }
+>>>>>>> parent of 8ef9520... 20:29
 
                         }
                     }
@@ -89,8 +124,47 @@ public class zhuceActivity extends Activity {
         if (radioButton==rb1)
         xb="男";
         else
+<<<<<<< HEAD
             xb="女";
 
+=======
+            xb = "女";
+
+    }
+
+
+    public int okhttp_post(final String url) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                OkHttpClient okHttpClient = new OkHttpClient();
+
+                RequestBody requestBody = new FormBody.Builder().add("username", yhm)
+                        .add("password", mm).build();
+
+
+                Request request = new Request.Builder()
+                        .url(url)
+                        .post(requestBody)
+                        .build();
+                try {
+                    Response response = okHttpClient.newCall(request).execute();
+
+                    data = response.body().string();
+                    JSONObject jsonObject = new JSONObject(data);
+                    zt = jsonObject.getInt("code");
+//                    Log.d("状态码","conde:==="+String.valueOf(zt));
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+        Log.d("code", "请求返回状态码：" + zt);
+        return zt;
+>>>>>>> parent of 8ef9520... 20:29
     }
 
 }
